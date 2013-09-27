@@ -1,0 +1,19 @@
+{
+  "name": "parser",
+  "repo": "charlottegore/parser",
+  "description": "NICE screening test.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
+  "paths" : [
+    "local"
+  ],
+  "local" : [
+    "token"
+  ]
+}
