@@ -1,0 +1,24 @@
+{
+  "name": "screening",
+  "version": "0.0.1",
+  "description": "NICE screening test.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CharlotteGore/BuggerAlleThifForALark.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "Readme.md",
+  "gitHead": "21fddd871fa2e9ecc472fb73d80dd93bf82a6a15",
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0"
+  }
+}
