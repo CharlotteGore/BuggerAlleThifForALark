@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "preinstall" : "npm install -g grunt-cli",
     "test": "grunt test"
   },
   "repository": {
