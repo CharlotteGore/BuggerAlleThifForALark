@@ -8,16 +8,11 @@ In the end I hacked it. Pretty glad I've already got this particular contract, t
 
 ## Installation
 
+Download and install Node. Then install all the dev dependencies required for running tests.
+
     $ npm install
+    $ npm install -g grunt-cli
     
-## Running
+## Running the tests:
 
-Just open test/testrunner.html
-
-## API
-
-   
-
-## License
-
-  MIT
+    $ grunt test
