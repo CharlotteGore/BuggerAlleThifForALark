@@ -1,4 +1,6 @@
-var parser = require('parser');
+var parser = require('../index.js');
+var chai = require('chai');
+var should = chai.should();
 
 describe('Simple Mathematical Parser Screening', function () {
 

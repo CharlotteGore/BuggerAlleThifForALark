@@ -46,7 +46,7 @@ var Token = function( input ){
 
 	return this;
 
-}
+};
 
 // export a function to tokenise a string...
 module.exports.tokenise = function( str ){
@@ -71,8 +71,8 @@ module.exports.tokenise = function( str ){
 				tokens.push( new Token( parseInt( intString, 10 ) ) );
 				intString = "";   
 
-      		}
-      		// add the current, non-digit token to the array.
+			}
+			// add the current, non-digit token to the array.
 			tokens.push( new Token(c) );
 		}
 
@@ -87,4 +87,4 @@ module.exports.tokenise = function( str ){
 
 	return tokens;
 
-}
+};

@@ -29,7 +29,7 @@ var methods = {
 // Recursively find expressions inside nested parenthesis, compute them, return.
 var flatten = function( tokens, index ){
 
-	var i = 0;
+	var i = 0, temp;
 
 	while(tokens[i] && tokens[i + 1]){
 
@@ -38,7 +38,7 @@ var flatten = function( tokens, index ){
 			// genuinely terrifying array munging stuff here. Sorry.
 
 			// get a copy of all the tokens from the ( onwards
-			var temp = tokens.slice(i)
+			temp = tokens.slice(i);
 			// chop everything from the ( onwards off tokens.
 			tokens.splice( i, tokens.length );
 			// concat the results of the recursive call to flatten.. 
@@ -46,9 +46,9 @@ var flatten = function( tokens, index ){
 
 		}
 
-		if(tokens[i].type==="closed"){
+		if(tokens[i].type === "closed"){
 			// get the expression within the brackets
-			var temp = tokens.slice(1, i);
+			temp = tokens.slice(1, i);
 			// compute the expression *now*, append the remaining tokens and return
 			return compute(temp).concat(tokens.slice(i + 1));
 
@@ -59,7 +59,7 @@ var flatten = function( tokens, index ){
 
 	return tokens;
 
-}
+};
 
 // this function computes the binary operation.
 var compute = function( tokens ){
@@ -68,7 +68,7 @@ var compute = function( tokens ){
 		// evaluate a binary operation.
 		if(tokens[0].type==="int" && tokens[2].type==="int" && methods[tokens[1].value]){
 			// replace the operation with the result.
-  			tokens.splice( 0,3, { type : "int", value : methods[tokens[1].value](tokens[0].value, tokens[2].value)} )
+			tokens.splice( 0,3, { type : "int", value : methods[tokens[1].value](tokens[0].value, tokens[2].value)} );
 		} else{
 			// this is really an 'avoid infinite loops because of dirty input' catchall
 			tokens = [];
@@ -80,19 +80,19 @@ var compute = function( tokens ){
 
 	return tokens;
 
-}
+};
 
 
 var evaluate = function( str ){
 
 	// get the tokens.
-	var tokens = require('token').tokenise( str );
+	var tokens = require('./local/token/index.js').tokenise( str );
 
 	// computer the result
 	var result = compute(flatten(tokens));
 	// return it in a friendly format.
 	return result[0].value;
-}
+};
 
 // exports
 module.exports = {

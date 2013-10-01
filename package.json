@@ -14,18 +14,13 @@
     "url": "git://github.com/CharlotteGore/BuggerAlleThifForALark.git"
   },
   "author": "",
-  "license": "BSD",
+  "license": "MIT",
   "readmeFilename": "Readme.md",
   "gitHead": "21fddd871fa2e9ecc472fb73d80dd93bf82a6a15",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-cafe-mocha": "~0.1.9",
-    "grunt-mocha-phantomjs": "~0.3.0",
+    "grunt-mocha-test": "~0.3.0",
     "grunt-contrib-jshint": "~0.6.4",
-    "grunt-shell": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "component": "~0.17.6",
-    "chai": "~1.8.0",
-    "mocha": "~1.13.0"
+    "chai": "~1.8.0"
   }
 }
